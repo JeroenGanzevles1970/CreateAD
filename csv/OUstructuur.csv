@@ -1,0 +1,40 @@
+Name;path;description
+Management;;Management OU 
+Service Accounts;OU=Management; Service Accounts OU 
+Servers;OU=Management; Servers OU 
+Groups;OU=Management; Groups OU
+Users;OU=Management; Users OU
+jg;;jg OU
+Computers;OU=jg; Computers OU 
+VDI;OU=Computers,OU=jg; VDI OU 
+Production;OU=VDI,OU=Computers,OU=jg; Production OU 
+Packaging;OU=VDI,OU=Computers,OU=jg; Packaging OU 
+Acceptance;OU=VDI,OU=Computers,OU=jg; Acceptance OU 
+Servers;OU=jg; Servers OU
+Service Accounts;OU=jg; Service Accounts OU  
+Users;OU=jg; Users OU
+Groups;OU=jg; Groups OU
+Application Groups;OU=Groups,OU=jg; Application Groups OU
+Authorization Groups;OU=Groups,OU=jg; Authorization Groups OU
+Research Groups;OU=Groups,OU=jg; Research Groups OU
+Role Groups;OU=Groups,OU=jg; Role Groups OU
+OTA;; OTA OU 
+OTA - Management;OU=OTA;OTA Management OU 
+Service Accounts;"OU=OTA - Management,OU=OTA";OTA Service Accounts OU 
+Servers;"OU=OTA - Management,OU=OTA";OTA Servers OU 
+Groups;"OU=OTA - Management,OU=OTA";OTA Groups OU
+Users;"OU=OTA - Management,OU=OTA";OTA Users OU
+OTA - jg;OU=OTA;OTA jg OU 
+Computers;"OU=OTA - jg,OU=OTA";OTA Computers jg OU
+VDI;"OU=Computers,OU=OTA - jg,OU=OTA";OTA VDI jg OU
+Production;"OU=VDI,OU=Computers,OU=OTA - jg,OU=OTA";OTA VDI Production jg OU
+Packaging;"OU=VDI,OU=Computers,OU=OTA - jg,OU=OTA";OTA VDI Packaging jg OU
+Acceptance;"OU=VDI,OU=Computers,OU=OTA - jg,OU=OTA";OTA VDI Acceptance jg OU
+Groups;"OU=OTA - jg,OU=OTA";OTA Groups jg OU
+Application Groups;"OU=Groups,OU=OTA - jg,OU=OTA";OTA Application Groups jg OU
+Authorization Groups;"OU=Groups,OU=OTA - jg,OU=OTA";OTA Authorization Groups jg OU
+Research Groups;"OU=Groups,OU=OTA - jg,OU=OTA";OTA Research Groups jg OU
+Role Groups;"OU=Groups,OU=OTA - jg,OU=OTA";OTA Role Groups jg OU
+Servers;"OU=OTA - jg,OU=OTA";OTA Servers jg OU
+Service Accounts;"OU=OTA - jg,OU=OTA";OTA Servers jg OU
+Users;"OU=OTA - jg,OU=OTA";OTA Servers jg OU 

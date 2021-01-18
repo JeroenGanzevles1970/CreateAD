@@ -1,0 +1,69 @@
+<Window 
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        Height="450" Width="800" WindowStyle="SingleBorderWindow" Foreground="Black" ResizeMode="NoResize" Title="Domain" WindowStartupLocation="CenterScreen">
+        <Grid>
+        <TabControl>
+            <TabItem Name="TBDomaincontoller" Header="Domain controller">
+                <Grid >
+                    <Label Content="IP Address" HorizontalAlignment="Left" Margin="25,123,0,0" VerticalAlignment="Top"/>
+                    <Label Content="PrefixLength" HorizontalAlignment="Left" Margin="26,153,0,0" VerticalAlignment="Top"/>
+                    <Label Content="Gateway" HorizontalAlignment="Left" Margin="25,185,0,0" VerticalAlignment="Top"/>
+                    <Label Content="Domain settings" HorizontalAlignment="Left" Margin="124,228,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+                    <Label Content="DomainName" HorizontalAlignment="Left" Margin="26,264,0,0" VerticalAlignment="Top"/>
+                    <Label Content="SafeModePassword" HorizontalAlignment="Left" Margin="26,323,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" />
+                    <Label Content="NetbiosName" HorizontalAlignment="Left" Margin="25,292,0,0" VerticalAlignment="Top"/>
+                    <Label Content="IP settings" HorizontalAlignment="Left" Margin="124,56,0,0" VerticalAlignment="Top" FontWeight="Bold" RenderTransformOrigin="-5.572,3.369"/>
+                    <Label Content="Host settings" HorizontalAlignment="Left" Margin="124,1,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+                    <Label Content="HostName" HorizontalAlignment="Left" Margin="26,17,0,0" VerticalAlignment="Top"/>
+                    <Label Content="DHCP" HorizontalAlignment="Left" Margin="26,91,0,0" VerticalAlignment="Top"/>
+                    <Button Name="BTHernoemServer" Content="Change hostname" HorizontalAlignment="Left" Margin="558,13,0,0" IsEnabled="false" VerticalAlignment="Top" Width="168" Height="44"/>
+                    <Button Name="BTConfigAD" Content="Create 1e domain controller" HorizontalAlignment="Left" Margin="558,283,0,0" IsEnabled="false" VerticalAlignment="Top" Width="168" Height="44"/>
+                    <TextBox Name="TXHostnaam" HorizontalAlignment="Left" Margin="186,26,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="248" ToolTip="Vul de hostnaam in."/>
+                    <TextBox Name="TXipaddress" HorizontalAlignment="Left" Margin="186,127,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="248" Height="17" ToolTip="Vul het IP address in." />
+                    <TextBox Name="TXPrefixLength" HorizontalAlignment="Left" Margin="186,157,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="248" Height="17" ToolTip="Vul het prefix length in."/>
+                    <TextBox Name="TXGateway" HorizontalAlignment="Left" Margin="186,189,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="248" ToolTip="Vul de gateway address in."/>
+                    <TextBox Name="TXDomeinNaam" HorizontalAlignment="Left" Margin="186,268,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="248" ToolTip="Vul de domeinnaam in."/>
+                    <TextBox Name="TXNetbiosNaam" HorizontalAlignment="Left" Margin="186,296,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="248" ToolTip="Vul de netbios domein naam in."/>
+                    <PasswordBox Name="PSSafeMode" HorizontalAlignment="Left" Margin="186,327,0,0" VerticalAlignment="Top" Width="248" ToolTip="Geef het safe mode password "/>
+                    <Image HorizontalAlignment="Left" Height="100" Margin="558,127,0,0" VerticalAlignment="Top" Width="169" Source="<vervang>/image/ActiveDirectory.png"/>
+                    <CheckBox Name="CHdhcp" Content="Yes" HorizontalAlignment="Left" Margin="186,97,0,0" VerticalAlignment="Top"/>
+                </Grid>
+            </TabItem>
+            <TabItem Name="TBou" Header="OU" IsEnabled="true">
+                <Grid>
+                    <Image HorizontalAlignment="Left" Height="100" Margin="630,140,0,0" VerticalAlignment="Top" Width="169" Source="<vervang>/image/ou.jpg"/>
+                    <Button Name="BTcreateOUs" Content="Create OU's" HorizontalAlignment="Left" Margin="594,40,0,0" VerticalAlignment="Top" Width="176" Height="44"/>
+                    <Button Name="BTEditCSV"  Content="Edit CSV file" HorizontalAlignment="Left" Margin="382,40,0,0" VerticalAlignment="Top" Width="176" Height="44"/>
+                    <Button Name="BTcreateOU" Content="Create OU" HorizontalAlignment="Left" Margin="594,306,0,0" VerticalAlignment="Top" Width="176" Height="44"/>
+                    <Label Content="CSV File:" HorizontalAlignment="Left" Margin="60,56,0,0" VerticalAlignment="Top"/>
+                    <Label Content="path:" HorizontalAlignment="Left" Margin="78,143,0,0" VerticalAlignment="Top"/>
+                    <Label Content="OU Naam:" HorizontalAlignment="Left" Margin="50,180,0,0" VerticalAlignment="Top"/>
+                    <TextBox Name="TXpathCSV" HorizontalAlignment="Left" Margin="121,60,0,0" Text="OUstructuur.csv" TextWrapping="Wrap" VerticalAlignment="Top" Width="219" Height="22" IsReadOnly="true"/>
+                    <TextBox Name="TXpathOU" HorizontalAlignment="Left" Margin="121,143,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="437"/>
+                    <TextBox Name="TXOUName" HorizontalAlignment="Left" Margin="121,184,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="189"/>
+                    <Button Name="BTBrowseOU" Content="Browse" HorizontalAlignment="Left" Margin="482,143,0,0" VerticalAlignment="Top" Height="18" Width="76"/>
+                </Grid>
+            </TabItem>
+            <TabItem Name="TBgroepen" Header="Groepen" IsEnabled="true">
+                <Grid>
+                    <Image HorizontalAlignment="Left" Height="100" Margin="630,140,0,0" VerticalAlignment="Top" Width="169" Source="<vervang>/image/group.jpg"/>
+                </Grid>
+            </TabItem>
+            <TabItem Name="TBUsers" Header="Users" IsEnabled="True">
+                <Grid>
+                    <Image HorizontalAlignment="Left" Height="100" Margin="630,140,0,0" VerticalAlignment="Top" Width="169" Source="<vervang>/image/user.jpg"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="logging">
+                <Grid>
+                    <ComboBox Name="CBfilelist" Grid.Column="1" HorizontalAlignment="Left" Margin="42,29,0,0" VerticalAlignment="Top" Width="376"/>
+                    <Button  Name="Btshowlog" Content="Show logging" HorizontalAlignment="Left" Margin="585,27,0,0" VerticalAlignment="Top" Width="144"/>
+                    <TextBox Name="TXShowlog" HorizontalAlignment="Left" Margin="42,62,0,0" VerticalAlignment="Top" Width="687" Height="290" IsReadOnly="True" HorizontalScrollBarVisibility="auto" VerticalScrollBarVisibility="Auto"/>
+                </Grid>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>
